@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lí nhân khẩu, hộ khẩu</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/page/household.css">
+    
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <div class="sibar"></div>
+            <div class="logo"></div>
+        </div>
+        <div class="header-right">
+            <div class="text"><b>Phường La Khê</b></div>
+            <div class="info">
+                <div class="avatar"></div>
+                <div class="name">Vũ Đình Hoài</div>
+            </div>
+        </div>
+    </div>
+        
+    <div class="main">
+        <div class="navbar">
+            <a href="#" class="menu-item">
+                <div class="menu-icon m-icon m-icon-dashboard"></div>
+                <div class="menu-text">Tổng quan</div>
+            </a>
+            <a href="household.html" class="menu-item menu-item-focus">
+                <div class="menu-icon m-icon m-icon-household"></div>
+                <div class="menu-text">Hộ khẩu</div>
+            </a>
+            <a class="menu-item">
+                <div class="menu-icon m-icon m-icon-report"></div>
+                <div class="menu-text">Thu phí, đóng góp</div>
+            </a>
+        </div>
+        <div class="page-content">
+            <div class="m-page-header">
+                <div class="m-page-title">Danh sách hộ khẩu</div>
+                <div class="m-page-button">
+                    <button id="btnAdd" class="m-btn m-btn-icon m-btn-icon-add">Thêm mới hộ khẩu</button>
+                </div>
+                
+            </div>
+            <div class="m-page-toolbar">
+                <input type="text" class="m-input-icon m-input m-input-icon m-icon-search" style="width: 270px;" placeholder="Tìm kiếm theo mã hổ khẩu hoặc CCCD">
+            </div>
+            <div class="m-page-grid">
+                <div class="m-grid">
+                    <table id="tblhousehold" class="m-table">
+                        <thead>
+                            <tr>
+                                <th class="m-text-left" style="width: 150px;">Mã hộ khẩu</th>
+                                <th class="m-text-left" style="width: 250px;">Họ tên chủ hộ</th>
+                                <th class="m-text-left" style="width: 350px;">Nơi ở hiện nay</th>
+                                <th class="m-text-left" style="width: 200px;">Tác vụ</th>
+                            </tr>
+                            
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="m-paging">
+                    <div class="m-paging-left">Hiển thị 1-100 hộ khẩu</div>
+                    <div class="m-paging-center">
+                        <button class="m-btn-first"></button>
+                        <button class="m-btn-prev"></button>
+                        <div class="m-page-number-group">
+                            <button class="m-page-number m-page-number-selected">1</button>
+                            <button class="m-page-number">2</button>
+                            <button class="m-page-number">3</button>
+                            <button class="m-page-number">4</button>
+                        </div>
+                        <button class="m-btn-next"></button>
+                        <button class="m-btn-last"></button>
+                    </div>
+                    <div class="m-paging-right">
+                        <select name="" id="">
+                            <option value="10">10 hộ khẩu/trang</option>
+                            <option value="20">20 hộ khẩu/trang</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="m-dialog">
+            
+                <div class="m-dialog-content">
+                    <div class="m-dialog-header">
+                        <div class="m-dialog-header-left">
+                            <i id="addhousehold" class="fas fa-user-plus"></i>
+                            <p>Thêm mới hộ khẩu</p>
+                        </div>
+                        <div class="m-dialog-header-right">
+                            <i id="btnClose" class="fas fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="m-dialog-body">
+                        <div>
+                            <label id="first" for="householdCode">Mã hộ khẩu:</label>
+                            <input id="householdCode" required type="text" class="m-input" style="width: 350px;">
+                        </div>
+                        <div>
+                            <label id="second" for="fullNameHead">Họ tên chủ hộ:</label>
+                            <input id="fullNameHead" required type="text" class="m-input" style="width: 350px;">
+                        </div>    
+                        <div>
+                            <label id="three" for="addresshousehold">Nơi ở hiện nay:</label>
+                            <input id="addresshousehold" required type="text" class="m-input" style="width: 350px;">
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="m-dialog-footer">
+                        <button id="btnSave" class="m-btndal">Lưu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="m-loading">
+        <div class="m-loading-icon">
+
+        </div>
+    </div>
+    <script src="/js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="/js/household.js"></script>
+
+</body>
+</html>

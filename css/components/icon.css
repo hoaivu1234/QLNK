@@ -1,0 +1,28 @@
+.m-icon{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.m-icon-search{
+    background-image: url('/assets/icon-20230621T043229Z-001/icon/search.png');
+}
+
+.m-icon-dashboard{
+    background-image: url('/assets/icon-20230621T043229Z-001/icon/dashboard.png');
+
+}
+
+.m-icon-16{
+    width: 16px;
+    height: 16px;
+}
+
+.m-icon-household{
+    background-image: url('/assets/icon-20230621T043229Z-001/icon/dic-employee.png');
+}
+
+.m-icon-report{
+    background-image: url('/assets/icon-20230621T043229Z-001/icon/report.png');
+}
+
