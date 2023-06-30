@@ -1,0 +1,83 @@
+.m-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.m-table tr{
+    border-bottom: 1px solid #bbb;
+    height: 48px;
+}
+
+.m-table tr td,th{
+    padding-left: 16px;
+    padding-right: 10px;
+}
+
+.m-table .m-text-left{
+    text-align: left;
+}
+
+.m-table .m-text-right{
+    text-align: right;
+}
+
+.m-table .m-text-center{
+    text-align: center;
+}
+
+.m-table tbody tr:hover{
+    background-color: #e9ebee;
+    
+}
+
+.m-table i{
+    padding-right: 12px;
+    cursor: pointer;
+}
+
+.m-table #details{
+    color: #000;
+}
+
+.m-table #edit{
+    color: rgb(221, 85, 85);
+}
+
+.m-table #addhousehold{
+    color: rgb(74, 74, 227);
+}
+
+.m-table #separate{
+    color: #00000073;
+}
+
+.m-table #staying{
+    color: darkgoldenrod;
+}
+
+.m-table #leave{
+    color: darkgrey;
+}
+
+.m-table #delete{
+    color: red;
+}
+
+.m-grid{
+    position: absolute;
+    top: 0;
+    bottom: 56px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.m-table th{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
+}
+
+
+
+

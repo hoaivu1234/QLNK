@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+@import url('./components/button.css');
+@import url('./components/input.css');
+@import url('./components/icon.css');
+@import url('./components/toast.css');
+@import url('/assets/font-20230621T043938Z-001/font/fontawesome-5.15.1/css/all.css');
+@import url('/assets/font-20230621T043938Z-001/font/fontawesome-5.15.1/js/all.js');
+@import url('./components/table.css');
+@import url('./components/paging.css');
+@import url('./components/dialog.css');
+@import url('./layout/navbar.css');
+@import url('./layout/content.css');
+@import url('./layout/header.css');
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0px;
+}
+
+.m-row{
+    width: 100%;
+}
+
+.m-btn{
+    margin-top: 4px;
+}
+
+.main{
+    width: 100%;
+    height: calc(100vh - 48px);
+    display: flex;
+}
+

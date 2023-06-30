@@ -1,0 +1,57 @@
+.m-paging{
+    width: 100%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.m-paging-center{
+    display: flex;    
+}
+
+.m-paging button{
+    width: 30px;
+    height: 30px;
+    margin: 4px;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    background-position: center center;
+    background-color: #fff;
+}
+
+.m-paging-center .m-page-number{
+    border-radius: 50%;
+    border: 1px solid #bbb;
+}
+
+.m-paging-center .m-page-number:hover{
+    background-color: #bbb;
+    color: #000;
+}
+
+.m-paging-center .m-page-number-selected{
+    background-color: #019160;
+    color: #fff;
+    cursor: pointer;
+}
+
+.m-btn-first{
+    background-image: url('/assets/icon-20230621T043229Z-001/icon/btn-firstpage.svg');
+    background-position: (5px,5px);
+}
+
+.m-btn-prev{
+    background-image: url('/assets/icon-20230621T043229Z-001/icon/btn-prev-page.svg');
+
+}
+
+.m-btn-next{
+    background-image: url('/assets/icon-20230621T043229Z-001/icon/btn-next-page.svg');
+}
+
+.m-btn-last{
+    background-image: url('/assets/icon-20230621T043229Z-001/icon/btn-lastpage.svg');
+}
+
