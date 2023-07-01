@@ -1,20 +1,18 @@
 $(".m-dialog").hide();
-$(document).ready(function(){
-    $("#btnClose").click(function(){
+$(document).ready(function () {
+    let url = window.location.href;
+    let mhk = url.substring(url.indexOf('MHK') + 4);
+    $("#btnClose").click(function () {
         $('.m-dialog').hide();
     })
 
     // get
     $.ajax({
         type: "GET",
-        url: "http://localhost:3000/MHK001",
-        success: function(response){
-            
-            for (const householdCode in response) {
-                const households = response[householdCode];
-                
-                for (const household of households) {
-                    let householdCode = household["Mã hộ khẩu"];
+        url: "http://localhost:3000/household?MHK=" + mhk,
+        success: function (response) {
+            for (const household of response) {
+                let householdCode = household["MHK"];
                 let cmt = household["Số CMT/CCCD"]
                 let fullname = household["Họ tên"];
                 let address = household["Nơi thường trú"];
@@ -26,14 +24,10 @@ $(document).ready(function(){
                 <td class="m-text-left">${address}</td>
                 <td class="m-text-left">${relationship}</td>
             </tr>`;
-            $("table#detailshousehold tbody").append(el);
-                }
-                
+                $("table#detailshousehold tbody").append(el);
             }
-           
-            
         },
-        error: function(response){
+        error: function (response) {
 
         }
     });
