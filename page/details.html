@@ -51,20 +51,22 @@
             </div>
             <div class="m-page-grid">
                 <div class="m-grid">
-                    <table id="tblhousehold" class="m-table">
+                    <table id="detailshousehold" class="m-table">
                         <thead>
                             <tr>
-                                <th class="m-text-left" style="width: 150px;">Mã hộ khẩu</th>
-                                <th class="m-text-left" style="width: 250px;">Họ tên chủ hộ</th>
-                                <th class="m-text-left" style="width: 350px;">Nơi ở hiện nay</th>
-                                <th class="m-text-left" style="width: 200px;">Tác vụ</th>
+                                <th class="m-text-left" style="width: 200px;">Mã hộ khẩu</th>
+                                <th class="m-text-left" style="width: 300px;">Họ tên</th>
+                                <th class="m-text-left" style="width: 300px;">Số CMT/CCCD</th>
+                                <th class="m-text-left" style="width: 400px;">Nơi ở hiện nay</th>
+                                <th class="m-text-left" style="width: 200px;">Quan hệ với chủ hộ</th>
                             </tr>
-                            
                             
                         </thead>
                         <tbody>
+                            
                         </tbody>
-                    </table> 
+                        
+                    </table>
                 </div>
                 
                 <div class="m-paging">
@@ -123,11 +125,98 @@
                     </div>
                 </div>
             </div>
+            <div class="m-row">
+                
+                <div class="m-dialog people">
+                    
+                    <div class="m-dialog-content people">
+                        <div class="m-dialog-header">
+                            <div class="m-dialog-header-left">
+                                <i class="fas fa-info" style="color: rgb(58, 58, 151);"></i>
+                                <p>Chi tiết nhân khẩu</p>
+                            </div>
+                            <div class="m-dialog-header-right">
+                                <i id="closedialog" class="fas fa-times"></i>
+                            </div>
+                        </div>
+                        <div class="m-dialog-body people">
+                            <div id="firstline" class="display">
+                                <div>
+                                    <label id="ten" for="householdCode">Mã hộ khẩu:</label>
+                                    <button id="peopleCode"></button>
+                                    
+                                </div>
+                                <div>
+                                    <label id="element" for="fullNameHead">Họ tên:</label>
+                                    <button id="peopleName"></button>
+                                </div> 
+                            </div>   
+                            <div id="second-line"class="display">
+                                <div>
+                                    <label id="first" for="householdCode">Nguyên quán:</label>
+                                    <button id="peopleDomicile"></button>
+                                    
+                                </div>
+                                <div>
+                                    <label id="second" for="fullNameHead">Dân tộc:</label>
+                                    <button id="peopleNation"></button>
+                                </div> 
+                            </div>
+                            <div id="three-line" class="display">
+                                <div>
+                                    <label id="three" for="householdCode">Trình độ học vấn:</label>
+                                    <button id="peopleEducation"></button>
+                                    
+                                </div>
+                                <div>
+                                    <label id="four" for="fullNameHead">Ngày sinh:</label>
+                                    <button id="peopleDob"></button>
+                                </div> 
+                            </div>
+                            <div id="four-line" class="display">
+                                <div>
+                                    <label id="five" for="householdCode">Quan hệ với chủ hộ:</label>
+                                    <button id="peopleAddress"></button>
+                                    
+                                </div>
+                                <div>
+                                    <label id="six" for="fullNameHead">Số CMT/CCCD:</label>
+                                    <button id="peopleCmt"></button>
+                                </div>
+                            </div>
+                            <div id="five-line" class="display">
+                                <div>
+                                    <label id="seven" for="householdCode">Nghề nghiệp:</label>
+                                    <button id="peopleJob"></button>
+                                    
+                                </div>
+                                <div>
+                                    <label id="eight" for="fullNameHead">Giới tính:</label>
+                                    <button id="peopleSex"></button>
+                                </div>
+                            </div>
+                            <div id="six-line" class="display">
+                                <div>
+                                    <label id="nine" for="householdCode">Nơi thường trú:</label>
+                                    <button id="peopleRelationship" style="width: 400px;"></button>
+                                    
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        <div class="m-dialog-footer people">
+                            <button id="ok" class="m-btndal">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     
     <script src="/js/code.jquery.com_jquery-3.7.0.min.js"></script>
-    <script src="/js/household.js"></script>
+    <script src="/js/details.js"></script>
+    
 
 </body>
 </html>

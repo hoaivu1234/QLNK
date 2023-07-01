@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QLNK</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <h1>Welcome</h1>
+    <div class="m-row">
+        <label for="">1. Button</label>
+        <div>
+            <button class="m-btn">Đồng ý</button>
+        </div>
+
+        <label for="">2. Button Icon</label>
+        <div>
+            <button class="m-btn m-btn-icon m-btn-icon-add">Đồng ý</button>
+        </div>
+
+        <label for="">3. Input</label>
+        <div class="m-row">
+            <input type="text" class="m-input" style="width: 200px;" placeholder="Tìm kiếm theo tên, số hồ sơ">
+        </div>
+
+        <div class="m-row">
+            <input type="text" class="m-input m-input-error" style="width: 200px;" placeholder="Tìm kiếm theo tên, số hồ sơ">
+        </div>
+
+        <div class="m-row" style="width: 200px;">
+            <div class="m-error-info">
+                <div class="m-error-text" style="width: 150px;">Mật khẩu không đúng định dạng</div>
+                <div class="m-error-arrow"></div>
+            </div>
+            <input type="text" class="m-input m-input-error" style="width: 200px;" placeholder="Tìm kiếm theo tên, số hồ sơ">
+        </div>
+
+        <label for="">4. Input Icon</label>
+        <div class="m-row">
+            <input type="text" class="m-input-icon m-input m-input-icon m-icon-search" style="width: 200px;" placeholder="Tìm kiếm theo tên, số hồ sơ">
+        </div>
+    </div>
+
+    <div class="m-row">
+        <label for="">5. Toast Message</label>
+        <div>
+            <button id="btnShowToast" class="m-btn m-btn-icon m-btn-icon-add">Hiển thị Toast msg</button>
+        </div>
+        <div class="m-toast-box" >
+            <div class="m-toast-item m-toast-warning">
+                <div class="m-toast-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                <div class="m-toast-text">Nội dung đính kèm tiêu đề</div>
+                <div class="m-toast-close"><i class="fas fa-times"></i></div>
+            </div>
+
+            <div class="m-toast-item m-toast-error">
+                <div class="m-toast-icon"><i class="fas fa-exclamation-circle"></i></div>
+                <div class="m-toast-text">Nội dung đính kèm tiêu đề</div>
+                <div class="m-toast-close"><i class="fas fa-times"></i></div>
+            </div>
+
+            <div class="m-toast-item m-toast-success">
+                <div class="m-toast-icon"><i class="fas fa-check-circle"></i></div>
+                <div class="m-toast-text">Nội dung đính kèm tiêu đề</div>
+                <div class="m-toast-close"><i class="fas fa-times"></i></div>
+            </div>
+
+            <div class="m-toast-item m-toast-info">
+                <div class="m-toast-icon"><i class="fas fa-info-circle"></i></div>
+                <div class="m-toast-text">Nội dung đính kèm tiêu đề</div>
+                <div class="m-toast-close"><i class="fas fa-times"></i></div>
+            </div>
+        </div>  
+    </div>
+
+    <div class="m-row">
+        <label for="">6. Table</label>
+        <div>
+            <table id="addhousehold" class="m-table">
+                <thead>
+                    <tr>
+                        <th class="m-text-left" style="width: 100px;">Mã hộ khẩu</th>
+                        <th class="m-text-left" style="width: 200px;">Họ tên chủ hộ</th>
+                        <th class="m-text-left" style="width: 250px;">Nơi ở hiện nay</th>
+                        <th class="m-text-left" style="width: 560px;">Tác vụ</th>
+                    </tr>
+                    
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="m-text-left">HK001</td>
+                        <td class="m-text-left">Nguyễn Sơn Tùng</td>
+                        <td class="m-text-left">Số 1, Đường Trần Duy Hưng, Cầu Giấy, Hà Nội</td>
+                        <td><i id="details" class="fas fa-eye"></i><i id="edit" class="fas fa-edit"></i><i id="addhousehold" class="fas fa-user-plus"></i><i id="separate" class="fas fa-object-ungroup"></i><i id="staying" class="fas fa-home"></i><i id="leave" class="fas fa-sign-out-alt"></i><i id="delete" class="fas fa-trash-alt"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="m-text-left">HK002</td>
+                        <td class="m-text-left">Lê Thị Cún</td>
+                        
+                        <td class="m-text-left">Số 19, Đường Láng, Đống Đa, Hà Nội</td>
+                        <td><i id="details" class="fas fa-eye"></i><i id="edit" class="fas fa-edit"></i><i id="addhousehold" class="fas fa-user-plus"></i><i id="separate"  class="fas fa-object-ungroup"></i><i id="staying" class="fas fa-home"></i><i id="leave" class="fas fa-sign-out-alt"></i><i id="delete" class="fas fa-trash-alt"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="m-text-left">HK003</td>
+                        <td class="m-text-left">Vũ Thanh Lâm</td>
+                        
+                        <td class="m-text-left">Số 22, Đường Trung Hòa, Cầu Giấy, Hà Nội</td>
+                        <td><i id="details" class="fas fa-eye"></i><i id="edit" class="fas fa-edit"></i><i id="addhousehold" class="fas fa-user-plus"></i><i id="separate"  class="fas fa-object-ungroup"></i><i id="staying" class="fas fa-home"></i><i id="leave" class="fas fa-sign-out-alt"></i><i id="delete" class="fas fa-trash-alt"></i></td>
+                    </tr>
+                    
+                </tbody>
+                
+            </table>
+
+            <table id="detailshousehold" class="m-table">
+                <thead>
+                    <tr>
+                        <th class="m-text-left" style="width: 100px;">Mã hộ khẩu</th>
+                        <th class="m-text-left" style="width: 200px;">Họ tên</th>
+                        <th class="m-text-left" style="width: 200px;">Số CMT/CCCD</th>
+                        <th class="m-text-left" style="width: 250px;">Nơi ở hiện nay</th>
+                        <th class="m-text-left" style="width: 2000px;">Quan hệ với chủ hộ</th>
+                    </tr>
+                    
+                </thead>
+                <tbody>
+                    
+                </tbody>
+                
+            </table>
+
+            
+            <div class="m-paging">
+                <div class="m-paging-left">Hiển thị 1-100 nhân khẩu</div>
+                <div class="m-paging-center">
+                    <button class="m-btn-first"></button>
+                    <button class="m-btn-prev"></button>
+                    <div class="m-page-number-group">
+                        <button class="m-page-number m-page-number-selected">1</button>
+                        <button class="m-page-number">2</button>
+                        <button class="m-page-number">3</button>
+                        <button class="m-page-number">4</button>
+                    </div>
+                    <button class="m-btn-next"></button>
+                    <button class="m-btn-last"></button>
+                </div>
+                <div class="m-paging-right">
+                    <select name="" id="">
+                        <option value="10">10 nhân khẩu/trang</option>
+                        <option value="20">20 nhân khẩu/trang</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-row">
+        <label for="">7. Dialog</label><br>
+        <label for="">Thêm hộ khẩu</label>
+        <div>
+            <button id="btnShowDialog" class="m-btn m-btn-icon m-btn-icon-add">Hiển thị Dialog</button>
+        </div>
+        <div class="m-dialog">
+            
+            <div class="m-dialog-content">
+                <div class="m-dialog-header">
+                    <div class="m-dialog-header-left">
+                        <i id="addhousehold" class="fas fa-user-plus"></i>
+                        <p>Thêm mới hộ khẩu</p>
+                    </div>
+                    <div class="m-dialog-header-right">
+                        <i id="closedialog" class="fas fa-times"></i>
+                    </div>
+                </div>
+                <div class="m-dialog-body">
+                    <div>
+                        <label id="first" for="householdCode">Mã hộ khẩu:</label>
+                        <input id="householdCode" type="text" class="m-input" style="width: 350px;">
+                    </div>
+                    <div>
+                        <label id="second" for="fullNameHead">Họ tên chủ hộ:</label>
+                        <input id="fullNameHead" type="text" class="m-input" style="width: 350px;">
+                    </div>    
+                    <div>
+                        <label id="three" for="addresshousehold">Địa chỉ:</label>
+                        <input id="addresshousehold" type="text" class="m-input" style="width: 350px;">
+                    </div>
+                    <div>
+                        <label id="four" for="numberMember">Nhập số thành viên:</label>
+                        <input id="numberMember" type="text" class="m-input" style="width: 350px;">
+                    </div>
+                    
+                </div>
+                <div class="m-dialog-footer">
+                    <button id="save" class="m-btndal">Lưu</button>
+                </div>
+            </div>
+        </div>
+        <label for="">Thêm nhân khẩu</label>
+        <div>
+            <button id="btnShowDialogAdd" class="m-btn m-btn-icon m-btn-icon-add">Hiển thị Dialog</button>
+        </div>
+        <div class="m-dialog add">
+            <div class="m-dialog-content add-content">
+                <div class="m-dialog-header add-header">
+                    <div class="m-dialog-header-left add-left">
+                        <i id="addhousehold" class="fas fa-user-plus"></i>
+                        <p>Thêm mới nhân khẩu</p>
+                    </div>
+                    <div class="m-dialog-header-right add-right">
+                        <i id="btnClose add" class="fas fa-times"></i>
+                    </div>
+                </div>
+                <div class="m-dialog-body add-body">
+                    <div class="first-add" id="display">
+                        <div class="left">
+                            <label id="left-first" for="fullName">Họ tên:</label>
+                            <input id="fullName" type="text" class="m-input" style="width: 200px;">
+                        </div>
+                        <div class="right">
+                            <label id="right-first" for="date">Ngày sinh:</label>
+                            <input id="date" type="date" class="m-input" style="width: 200px;">
+                        </div>
+                    </div>
+                    <div class="second-add" id="display">
+                        <div class="left">
+                            <label id="left-second" for="domicile">Nguyên quán:</label>
+                            <input id="domicile" type="text" class="m-input" style="width: 200px;">
+                        </div>
+                        <div class="right">
+                            <label id="right-second" for="placeResidence">Nơi thường trú:</label>
+                            <input id="placeResidence" type="text" class="m-input" style="width: 200px;">
+                        </div>
+                    </div>
+                    <div class="three-add" id="display">
+                        <div class="left">
+                            <label id="left-three" for="nation">Dân tộc:</label>
+                            <input id="nation" type="text" class="m-input" style="width: 200px;">
+                        </div>
+                        <div class="right">
+                            <label id="right-three" for="cmt">Số CMT/CCCD:</label>
+                            <input id="cmt" type="number" class="m-input" style="width: 200px;">
+                        </div>
+                    </div>
+                    <div class="four-add" id="display">
+                        <div class="left">
+                            <label id="left-four" for="
+                            academicLevel">Trình độ học vấn:</label>
+                            <input id="academicLevel" type="text" class="m-input" style="width: 200px;">
+                        </div>
+                        <div class="right">
+                            <label id="right-four" for="job">Nghề nghiệp:</label>
+                            <input id="job" type="text" class="m-input" style="width: 200px;">
+                        </div>
+                    </div>
+                    <div class="five-add" id="display">
+                        <div class="left">
+                            <label id="left-five" for="nickname">Biệt danh:</label>
+                            <input id="nickname" type="text" class="m-input" style="width: 200px;">
+                        </div>
+                        <div class="right">
+                            <label id="right-five" for="sex">Giới tính:</label>
+                            
+                            <select name="" id="sex">
+                                <option  value="Nam">Nam</option>
+                                <option value="Nu">Nữ</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="six-add" id="display">
+                        <div class="left">
+                            <label id="left-six" for="workplace">Nơi làm viêc:</label>
+                            <input id="workplace" type="text" class="m-input" style="width: 200px;">
+                        </div>
+                        <div class="right">
+                            <label id="right-six" for="relationship">Quan hệ với chủ hộ:</label>
+                            <input id="relationship" type="text" class="m-input" style="width: 200px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="m-dialog-footer add">
+                    <button id="btnSave add" class="m-btndal">Lưu</button>
+                </div>
+            </div>
+        </div>
+        <label for="">Đăng kí tạm vắng</label>
+        <div>
+            <button id="btnShowDialogLeave" class="m-btn m-btn-icon m-btn-icon-add">Hiển thị Dialog</button>
+        </div>
+        <div class="m-dialog leave">
+            <div class="m-dialog-content leave-content">
+                <div class="m-dialog-header leave-header">
+                    <div class="m-dialog-header-left leave-left">
+                        <i id="leave" class="fas fa-sign-out-alt" style="color: darkgrey;"></i>
+                        <p>Đăng kí tạm vắng</p>
+                    </div>
+                    <div class="m-dialog-header-right leave-right">
+                        <i id="btnClose leave" class="fas fa-times"></i>
+                    </div>
+                </div>
+                <div class="m-dialog-body leave-body">
+                    <div>
+                        <label id="first" for="cccd">Số CMT/CCCD:</label>
+                        <input id="cccd" type="text" class="m-input" style="width: 200px;">
+                    </div>
+                    <div>
+                        <label id="second" for="papercode">Mã giấy tạm vắng:</label>
+                        <input id="papercode" type="text" class="m-input" style="width: 200px;">
+                    </div>
+                    <div>
+                        <label id="three" for="shelter">Nơi tạm trú:</label>
+                        <input id="shelter" type="text" class="m-input" style="width: 200px;">
+                    </div>
+                    <div>
+                        <label id="four" for="fromdate">Từ ngày:</label>
+                        <input type="date" id="fromdate" class="m-input" style="width: 200px;">
+                    </div>
+                    <div>
+                        <label id="five" for="todate">Đến ngày:</label>
+                        <input type="date" id="todate" class="m-input" style="width: 200px;">
+                    </div>
+                    <div>
+                        <label id="six" for="reason">Lí do:</label>
+                        <input id="reason" type="text" class="m-input" style="width: 200px; height: 80px;">
+                    </div>
+                </div>
+                <div class="m-dialog-footer leave">
+                    <button id="btnSave leave" class="m-btndal">Lưu</button>
+                </div>
+            </div>
+        </div>
+
+        <label for="">Đăng kí tạm trú</label>
+        <div>
+            <button id="btnShowDialogStay" class="m-btn m-btn-icon m-btn-icon-add">Hiển thị Dialog</button>
+        </div>
+        <div class="m-dialog stay">
+            <div class="m-dialog-content stay-content">
+                <div class="m-dialog-header">
+                    <div class="m-dialog-header-left">
+                        <i id="staying" class="fas fa-home" style="color: darkgoldenrod;"></i>
+                        <p>Đăng kí tạm trú</p>
+                    </div>
+                    <div class="m-dialog-header-right">
+                        <i id="btnClose stay" class="fas fa-times"></i>
+                    </div>
+                </div>
+                <div class="m-dialog-body stay-body">
+                    <div>
+                        <label id="seven" for="fullname">Họ tên:</label>
+                        <input id="fullname" type="text" class="m-input" style="width: 200px;">
+                    </div>
+                    <div>
+                        <label id="eight" for="date">Ngày sinh:</label>
+                        <input id="date" type="date" class="m-input" style="width: 200px;">
+                    </div>
+                    <div>
+                        <label id="first" for="cccd">Số CMT/CCCD:</label>
+                        <input id="cccd" type="text" class="m-input" style="width: 200px;">
+                    </div>
+                    <div>
+                        <label id="second" for="permanentAddress">Địa chỉ thường trú:</label>
+                        <input id="permanentAddress" type="text" class="m-input" style="width: 200px;">
+                    </div>
+                    <div>
+                        <label id="three" for="accommodation">Nơi ở hiện nay:</label>
+                        <input id="accommodation" type="text" class="m-input" style="width: 200px;">
+                    </div>
+                    <div>
+                        <label id="four" for="formdate">Từ ngày:</label>
+                        <input type="date" id="formdate" class="m-input" style="width: 200px;">
+                    </div>
+                    <div>
+                        <label id="five" for="todate">Đến ngày:</label>
+                        <input type="date" id="todate" class="m-input" style="width: 200px;">
+                    </div>
+                    <div>
+                        <label id="six" for="reason">Lí do:</label>
+                        <input id="reason" type="text" class="m-input" style="width: 200px; height: 80px;">
+                    </div>
+                </div>
+                <div class="m-dialog-footer stay">
+                    <button id="btnSave stay" class="m-btndal">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="m-row">
+        <label for="">Chi tiết hộ khẩu</label>
+        <div class="m-dialog people">
+            
+            <div class="m-dialog-content people">
+                <div class="m-dialog-header">
+                    <div class="m-dialog-header-left">
+                        <i class="fas fa-info" style="color: rgb(58, 58, 151);"></i>
+                        <p>Chi tiết nhân khẩu</p>
+                    </div>
+                    <div class="m-dialog-header-right">
+                        <i id="closedialog" class="fas fa-times"></i>
+                    </div>
+                </div>
+                <div class="m-dialog-body people">
+                    <div id="firstline" class="display">
+                        <div>
+                            <label id="ten" for="householdCode">Mã hộ khẩu:</label>
+                            <button id="peopleCode"></button>
+                            
+                        </div>
+                        <div>
+                            <label id="element" for="fullNameHead">Họ tên chủ hộ:</label>
+                            <button id="peopleName"></button>
+                        </div> 
+                    </div>   
+                    <div id="second-line"class="display">
+                        <div>
+                            <label id="first" for="householdCode">Nguyên quán:</label>
+                            <button id="peopleDomicile"></button>
+                            
+                        </div>
+                        <div>
+                            <label id="second" for="fullNameHead">Dân tộc:</label>
+                            <button id="peopleNation"></button>
+                        </div> 
+                    </div>
+                    <div id="three-line" class="display">
+                        <div>
+                            <label id="three" for="householdCode">Trình độ học vấn:</label>
+                            <button id="peopleEducation"></button>
+                            
+                        </div>
+                        <div>
+                            <label id="four" for="fullNameHead">Ngày sinh:</label>
+                            <button id="peopleDob"></button>
+                        </div> 
+                    </div>
+                    <div id="four-line" class="display">
+                        <div>
+                            <label id="five" for="householdCode">Quan hệ với chủ hộ:</label>
+                            <button id="peopleAddress"></button>
+                            
+                        </div>
+                        <div>
+                            <label id="six" for="fullNameHead">Số CMT/CCCD:</label>
+                            <button id="peopleCmt"></button>
+                        </div>
+                    </div>
+                    <div id="five-line" class="display">
+                        <div>
+                            <label id="seven" for="householdCode">Nghề nghiệp:</label>
+                            <button id="peopleJob"></button>
+                            
+                        </div>
+                        <div>
+                            <label id="eight" for="fullNameHead">Giới tính:</label>
+                            <button id="peopleSex"></button>
+                        </div>
+                    </div>
+                    <div id="six-line" class="display">
+                        <div>
+                            <label id="nine" for="householdCode">Nơi thường trú:</label>
+                            <button id="peopleRelationship" style="width: 400px;"></button>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="m-dialog-footer people">
+                    <button id="ok" class="m-btndal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $("#btnShowDialogStay").click(function(){
+            $(".m-dialog.stay").show();
+        })
+            
+        
+    })
+
+       
+        
+
+    </script>
+</body>
+</html>

@@ -238,6 +238,82 @@
     padding-right: 88px;
 }
 
-.m-dialog{
+.m-dialog.people{
     display: block;
 }
+
+.m-dialog-content.people{
+    height: 400px;
+    width: 750px;
+    
+}
+
+.m-dialog-content .display{
+    display: flex;
+    align-items: center;
+}
+
+.m-dialog-body.people{
+    width: 100%;
+    height: 300px;
+}
+
+.m-dialog-content button{
+    width: 200px;
+    height: 24px;
+    background-color: #fff;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+}
+
+.m-dialog-body.people #ten{
+    padding-right: 60px;
+}
+
+.m-dialog-body.people #element{
+    padding-left: 20px;
+    padding-right: 42px;
+}
+
+.m-dialog-body.people #first{
+    padding-right: 51px;
+}
+
+.m-dialog-body.people #three{
+    padding-right: 30px;
+}
+
+.m-dialog-body.people #five{
+    padding-right: 14px;
+}
+
+.m-dialog-body.people #seven{
+    padding-right: 53px;
+}
+
+.m-dialog-body.people #nine{
+    padding-right: 38px;
+    
+}
+
+.m-dialog-body.people #second{
+    padding-right: 78px;
+    padding-left: 20px;
+}
+
+.m-dialog-body.people #four{
+    padding-right: 66px;
+    padding-left: 20px;
+}
+
+.m-dialog-body.people #six{
+    padding-right: 36px;
+    padding-left: 20px;
+}
+
+.m-dialog-body.people #eight{
+    padding-right: 76px;
+    padding-left: 20px;
+}
+
+

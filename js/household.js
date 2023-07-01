@@ -16,38 +16,35 @@ $(document).ready(function(){
         $('.m-dialog').hide();
     })
     //Kiểm tra dữ liệu khi nhấn lưu
-    $("#btnSave").click(function(){
-        //buils obj 
-        
+    $("#btnSave").click(function() {
         let householdCode = $("#householdCode").val();
-        let fullname = $("fullNameHead").val();
-        let address = $("addresshousehold").val();
-        let household = {
+        let fullname = $("#fullNameHead").val();
+        let address = $("#addresshousehold").val();
+        let relationship = "chủ hộ";
+            let household = {
                 "Mã hộ khẩu": householdCode,
                 "Họ tên": fullname,
-                "Nơi thường trú": address 
-            }
-
-        // gọi api hiển thị thêm mới
-        //hiển thị loading
-       // $(".m-loading").show();
-        $.ajax({
-            type: "POST",
-            url: "http://localhost:3000/household",
-            data: JSON.stringify(household),
-            dataType: "json",
-            contentType: "application/json",
-            success: function(response){
-                // sau khithêm xong ẩn loading đi, form,loading lại dl
-              //  $(".m-loading").hide();
-                $(".m-dialog").hide();
-                loadData();
-            },
-            error: function(response){
+                "Nơi thường trú": address,
+                "Quan hệ với chủ hộ": relationship
+            };
+        
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:3000/household",
+                data: JSON.stringify(household),
+                dataType: "JSON",
+                contentType: "application/json",
+                success: function(response) {
+                    $(".m-dialog").hide();
+                    loadData();
+                },
+                error: function(response) {
+        
+                }
+            });
+        }
+    );
     
-            }
-        });   
-    })
     $("input[required]").blur(function(){
         var me=this;
         
@@ -55,35 +52,43 @@ $(document).ready(function(){
     })
 })
 
-function loadData(){
-    
+function loadData(){ 
     $.ajax({
         type: "GET",
         url: "http://localhost:3000/household",
         success: function(response){
             
-            for (const household of response) {
-                let householdCode = household["Mã hộ khẩu"];
-                let fullname = household["Họ tên"];
-                let address = household["Nơi thường trú"];
-                let relationship = household["Quan hệ với chủ hộ"];
-                if (relationship === "chủ hộ") {
-                    // Lưu trữ thông tin của đối tượng hộ khẩu có quan hệ "chủ hộ" vào một mảng
-                    var el = `<tr>
-                <td class="m-text-left">${householdCode}</td>
-                <td class="m-text-left">${fullname}</td>
-                <td class="m-text-left">${address}</td>
-                <td><i id="details" class="fas fa-eye"></i><i id="edit" class="fas fa-edit"></i><i id="addhousehold" class="fas fa-user-plus"></i><i id="separate" class="fas fa-object-ungroup"></i><i id="staying" class="fas fa-home"></i><i id="leave" class="fas fa-sign-out-alt"></i><i id="delete" class="fas fa-trash-alt"></i></td>
-            </tr>`;
-            $("table#tblhousehold tbody").append(el);
-                }     
+           // console.log(response);
+
+          
+            for (const householdCode in response) {
+                const households = response[householdCode];
+                
+                for (const household of households) {
+                    let householdCode = household["Mã hộ khẩu"];
+                    
+                    let fullname = household["Họ tên"];
+                    let address = household["Nơi thường trú"];
+                    let relationship = household["Quan hệ với chủ hộ"];
+                    if (relationship === "chủ hộ") {
+                        var el = `<tr>
+                            <td class="m-text-left">${householdCode}</td>
+                            <td class="m-text-left">${fullname}</td>
+                            <td class="m-text-left">${address}</td>
+                            <td><a href="details.html"><i id="details-household" class="fas fa-eye"></i></a><i id="edit" class="fas fa-edit"></i><i id="addhousehold" class="fas fa-user-plus"></i><i id="separate" class="fas fa-object-ungroup"></i><i id="staying" class="fas fa-home"></i><i id="leave" class="fas fa-sign-out-alt"></i><i id="delete" class="fas fa-trash-alt"></i></td>
+                        </tr>`;
+                        $("table#tblhousehold tbody").append(el);
+                    }
+                }
+                
             }
             
         },
         error: function(response){
-
+            console.log(response);
         }
     });
+    
 }
 
 function validateInputRequired(input){
@@ -100,3 +105,4 @@ function validateInputRequired(input){
         $(input).removeAttr("title");
     }
 }
+
