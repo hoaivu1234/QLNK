@@ -22,7 +22,7 @@ $(document).ready(function () {
         let address = $("#addresshousehold").val();
         let relationship = "chủ hộ";
         let household = {
-            "Mã hộ khẩu": householdCode,
+            "MHK": householdCode,
             "Họ tên": fullname,
             "Nơi thường trú": address,
             "Quan hệ với chủ hộ": relationship
